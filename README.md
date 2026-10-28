@@ -1,0 +1,70 @@
+# off-japan-names
+
+Japanese product names for barcodes (JAN / EAN) of products sold in Japan, derived from the [Open Food Facts](https://world.openfoodfacts.org) database.
+
+> Contains information from Open Food Facts, which is made available here under the Open Database License (ODbL).
+
+日本で売られている品のバーコード（JAN）と、日本語の商品名の表です。[Open Food Facts](https://world.openfoodfacts.org)（OFF）のデータを元にしています。OFF に日本語の名前が無い品は、AI（Anthropic の Claude）で訳しました。
+
+## License / ライセンス
+
+- This database is made available under the [Open Database License (ODbL) v1.0](https://opendatacommons.org/licenses/odbl/1-0/). Any rights in individual contents of the database are licensed under the [Database Contents License (DbCL) v1.0](https://opendatacommons.org/licenses/dbcl/1-0/). See [LICENSE](LICENSE).
+- この表は ODbL 1.0 で公開します。表の中の個々の中身は DbCL 1.0 です（本文は [LICENSE](LICENSE)）。
+- If you publicly use this database or a work produced from it, ODbL requires you to keep the notice above and to share any derivative database under the same license.
+- この表、またはこの表から作った物を公に使うときは、上の告知を付け、表を手直しした物は同じ ODbL で渡してください（ODbL 4.3・4.4・4.6）。
+- Product images are **not** included. / 商品の画像は入っていません。
+
+## Files / ファイル
+
+| File | Contents |
+|---|---|
+| `off-jp-names.csv` | One row per barcode. UTF-8 (no BOM), LF, RFC 4180 quoting. |
+| `LICENSE` | ODbL 1.0 and DbCL 1.0, full texts. |
+
+## Columns / 列
+
+| Column | Meaning |
+|---|---|
+| `code` | Barcode. 13 digits (EAN-13 / JAN) or 8 digits (EAN-8 / short JAN). Check digit verified. UPC-A (12 digits) is stored as 13 digits with a leading `0`. In-store / restricted-circulation codes (13 digits with prefix `02`, `040`–`049` or `20`–`29`; 8 digits with prefix `2`) are excluded. |
+| `name_ja` | Japanese product name. / 日本語の商品名 |
+| `name_ja_source` | `off` = the Japanese name as written in Open Food Facts. `ai` = translated by Claude from the OFF name in another language. / `off`＝OFF に書かれた日本語の名前のまま・`ai`＝ほかの言語の名前を Claude で訳した名前 |
+| `name_orig` | The OFF name the row is based on (for `off`, the same Japanese name; for `ai`, the name that was translated). |
+| `name_orig_lang` | Language code of `name_orig` as tagged in OFF. |
+| `brands` | `brands` field of OFF, as is. |
+| `quantity` | `quantity` field of OFF, as is (not included in `name_ja`). |
+| `off_url` | The product page on Open Food Facts. |
+
+## How it was made / 作り方
+
+1. Source: `food.parquet` of the Hugging Face dataset [`openfoodfacts/product-database`](https://huggingface.co/datasets/openfoodfacts/product-database) (a daily conversion of the OFF JSONL dump), revision `89cfb571db20b1f1b246f27cab71837fc96225b1` (2026-10-27 09:07 UTC). Only the bulk file was used; the OFF API was not used.
+2. Selection: products whose `countries_tags` contains `en:japan` (or `en:日本`), or whose code starts with `45` or `49` (GS1 Japan prefixes). Codes are normalized to 8 or 13 digits and kept only if the check digit is valid; in-store codes are dropped. Codes (8 or 13 digits) with GS1 prefixes of the former Soviet Union and the Baltic states (`460`–`470`, `474`–`478`, `481`–`488`) are excluded: most of them are tagged only `en:japan` and look mis-tagged (the 8-digit ones are mostly products of European retailers). The country tags are as written by OFF contributors and may be wrong; some 8-digit codes starting with `45`/`49` are store numbers of European retailers, not Japanese products.
+
+   抜き出しの条件：国の札に日本が付いた品か、code が 45・49（GS1 Japan の頭）で始まる品。code は 8桁か13桁にそろえ、チェックデジットが正しい物だけを残し、店内コード（13桁の 02・040〜049・20〜29、8桁の 2 で始まる番号）は落としました。GS1 の頭が旧ソ連・バルト三国（460〜470・474〜478・481〜488）の品は、8桁・13桁とも、ほとんどが日本の札だけを持ち、札の誤りと見られるので入れていません（8桁の物は多くが欧州の店の品）。国の札は OFF の利用者が書いた物で、誤りがありえます。
+3. Japanese name: a `product_name` entry tagged `ja` (or the mistaken `jp`) that contains kana or kanji; else the main-language entry if the product's main language is Japanese; else any entry containing kana. A `ja` entry written only in Latin letters (e.g. `Wonda Coffee`) is treated as not Japanese and translated. Kanji-only names not tagged Japanese are treated as not Japanese (they are often Chinese).
+4. Translation (`ai` rows): for products without a Japanese name, the OFF names (all languages), generic name, brands and category tags were given to Claude (Anthropic), asking for a name close to how it would be labelled in a Japanese supermarket, brand names in katakana, no quantity, and an empty answer when unsure (no invented names). Answers that did not contain Japanese characters or were longer than 40 characters were discarded. Products with no name in any language are not included.
+5. **Translations are machine-generated and may be wrong.** Please report errors (see Contact).
+
+訳（`ai` の行）は機械の訳です。誤りがありえます。見つけたらお知らせください。
+
+## Counts / 件数（2026-10-27）
+
+| | Rows |
+|---|---:|
+| Products selected (valid code) / 抜き出した品 | 6,113 |
+| Not included: restricted-circulation codes `040`–`049` / 店内コード（040〜049） | 14 |
+| Not included: former Soviet Union / Baltic prefixes / 旧ソ連・バルト三国の頭 | 775 |
+| `name_ja_source = off` (Japanese name in OFF) | 535 |
+| `name_ja_source = ai` (translated) | 3,906 |
+| Not included: translation left empty or rejected / 訳が空・検査で外れた | 329 |
+| Not included: no name in any language / 名前がまったく無い | 554 |
+| **Rows in `off-jp-names.csv`** | **4,441** |
+
+## Updating / 更新の仕方
+
+The table is a snapshot. To update it, repeat the steps above on a newer revision of `food.parquet`: keep the rows whose OFF Japanese name is unchanged, take new Japanese names from OFF as `off`, and translate only new products that still have no Japanese name. Each update is published as a new commit with the revision in the commit message.
+
+この表はある日の写しです。更新するときは、新しい版の `food.parquet` で上の手順をやり直し、OFF に日本語の名前が増えた品は `off` に替え、まだ日本語の名前が無い新しい品だけを訳します。
+
+## Contact / 連絡先
+
+support@digicle.net
