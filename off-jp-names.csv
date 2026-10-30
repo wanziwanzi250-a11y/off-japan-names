@@ -1256,7 +1256,7 @@ code,name_ja,name_ja_source,name_orig,name_orig_lang,brands,quantity,off_url
 4901061204306,日本酒,ai,Saké,fr,,,https://world.openfoodfacts.org/product/4901061204306
 4901071231705,カップラーメン スーパーマックス とんこつ,ai,Ramen cup super max tonkotsu,fr,,,https://world.openfoodfacts.org/product/4901071231705
 4901085001189,お茶 jasmine tea,off,お茶 jasmine tea,fr,,,https://world.openfoodfacts.org/product/4901085001189
-4901085003800,読み込んでいます…,off,読み込んでいます…,ja,Itoen,600 ml,https://world.openfoodfacts.org/product/4901085003800
+4901085003800,お～いお茶 緑茶,ai,Oii Ocha Ryokucha (green Tea),fr,Itoen,600 ml,https://world.openfoodfacts.org/product/4901085003800
 4901085004296,緑茶,off,緑茶,ja,style one,500ml,https://world.openfoodfacts.org/product/4901085004296
 4901085029503,ほうじ茶,off,ほうじ茶,en,,,https://world.openfoodfacts.org/product/4901085029503
 4901085041888,伊藤園 ヨーグルト飲料 ナタデココ入り,ai,Bebida de yogur y toppings de nata de coco,es,ito en,,https://world.openfoodfacts.org/product/4901085041888
@@ -2329,7 +2329,7 @@ code,name_ja,name_ja_source,name_orig,name_orig_lang,brands,quantity,off_url
 4902201406147,ネスカフェ ゴールドブレンド,ai,Nescafe,zh,"Gold Blend, Nescafe",6.6g,https://world.openfoodfacts.org/product/4902201406147
 4902201412124,ネスカフェ エクセラ ふわラテ キャラメル,ai,"Nescafe, excella, instant coffee, fuwa latte caramel",en,,,https://world.openfoodfacts.org/product/4902201412124
 4902201412131,ネスレ ふわラテ ミルクココア,ai,"Nestle, fuwa latte milk cocoa instant coffee",en,,,https://world.openfoodfacts.org/product/4902201412131
-4902201412292,ネスレ インスタントコーヒー,ai,"Nestle, instant coffee",en,Nestlé,,https://world.openfoodfacts.org/product/4902201412292
+4902201412292,ネスレ ふわラテ 宇治抹茶,ai,"Nestle, instant coffee",en,Nestlé,,https://world.openfoodfacts.org/product/4902201412292
 4902201418782,ネスカフェ インスタントコーヒー 深煎り,ai,Instant Coffee Deep Roasted,en,Nescafe,65g,https://world.openfoodfacts.org/product/4902201418782
 4902201423984,ネスレ ミルクティー,ai,Mulk tea,en,Nestle,,https://world.openfoodfacts.org/product/4902201423984
 4902201424042,ゴールドブレンド,ai,Gold Blend,fr,,,https://world.openfoodfacts.org/product/4902201424042
@@ -4217,7 +4217,6 @@ code,name_ja,name_ja_source,name_orig,name_orig_lang,brands,quantity,off_url
 4983101201261,栗とくるみのケーキ,ai,Chesnut and Walnut Cake,fr,,,https://world.openfoodfacts.org/product/4983101201261
 4983885110001,ターメリック,ai,Curcuma,fr,Biocambresis,,https://world.openfoodfacts.org/product/4983885110001
 49840292,マヨネーズ,off,マヨネーズ,ja,"Kewpie, キューピー",200 g,https://world.openfoodfacts.org/product/49840292
-49840322,読み込んでいます…,off,読み込んでいます…,ja,,,https://world.openfoodfacts.org/product/49840322
 4984152196438,鬼滅の刃 チョコサンド,ai,Démon Slayer Choco Sandwich,fr,,,https://world.openfoodfacts.org/product/4984152196438
 4984183021877,イーストビー デザートソース いちご,ai,Dessert Sauce Strawberry,en,East Bee,475g,https://world.openfoodfacts.org/product/4984183021877
 4984252000307,3年熟成醤油,ai,Sauce soja maturee 3 ans,fr,,,https://world.openfoodfacts.org/product/4984252000307

@@ -43,21 +43,33 @@ Japanese product names for barcodes (JAN / EAN) of products sold in Japan, deriv
 3. Japanese name: a `product_name` entry tagged `ja` (or the mistaken `jp`) that contains kana or kanji; else the main-language entry if the product's main language is Japanese; else any entry containing kana. A `ja` entry written only in Latin letters (e.g. `Wonda Coffee`) is treated as not Japanese and translated. Kanji-only names not tagged Japanese are treated as not Japanese (they are often Chinese).
 4. Translation (`ai` rows): for products without a Japanese name, the OFF names (all languages), generic name, brands and category tags were given to Claude (Anthropic), asking for a name close to how it would be labelled in a Japanese supermarket, brand names in katakana, no quantity, and an empty answer when unsure (no invented names). Answers that did not contain Japanese characters or were longer than 40 characters were discarded. Products with no name in any language are not included.
 5. **Translations are machine-generated and may be wrong.** Please report errors (see Contact).
+6. Corrections (2026-10-30): rows whose OFF name was found not to be a product name, or to name a different product, were corrected by hand after checking retailer pages and the OFF photo. A corrected row has `name_ja_source = ai`; `name_orig` is the main-language OFF name.
 
 訳（`ai` の行）は機械の訳です。誤りがありえます。見つけたらお知らせください。
 
-## Counts / 件数（2026-10-27）
+## Corrections / 直した行（2026-10-30）
+
+| `code` | OFF name | Correction |
+|---|---|---|
+| `4901085003800` | 読み込んでいます… (a page-loading message, not a product name) | `name_ja` = お～いお茶 緑茶 (checked on two retailer pages) |
+| `4902201412292` | Nestle, instant coffee | `name_ja` = ネスレ ふわラテ 宇治抹茶 (the OFF photo and ingredients) |
+| `49840322` | 読み込んでいます… (no other name, brand or category) | Removed |
+
+OFF の名前が品の名前でない行・別の品の名前の行を、小売のページと OFF の写真で確かめて、手で直しました。直した行の `name_ja_source` は `ai`、`name_orig` は OFF の主の言語の名前です。
+
+## Counts / 件数（2026-10-27・2026-10-30 に直した行を反映）
 
 | | Rows |
 |---|---:|
 | Products selected (valid code) / 抜き出した品 | 6,113 |
 | Not included: restricted-circulation codes `040`–`049` / 店内コード（040〜049） | 14 |
 | Not included: former Soviet Union / Baltic prefixes / 旧ソ連・バルト三国の頭 | 775 |
-| `name_ja_source = off` (Japanese name in OFF) | 535 |
-| `name_ja_source = ai` (translated) | 3,906 |
+| `name_ja_source = off` (Japanese name in OFF) | 533 |
+| `name_ja_source = ai` (translated, including 2 corrected rows) | 3,907 |
 | Not included: translation left empty or rejected / 訳が空・検査で外れた | 329 |
 | Not included: no name in any language / 名前がまったく無い | 554 |
-| **Rows in `off-jp-names.csv`** | **4,441** |
+| Not included: removed by correction / 直して外した | 1 |
+| **Rows in `off-jp-names.csv`** | **4,440** |
 
 ## Updating / 更新の仕方
 
