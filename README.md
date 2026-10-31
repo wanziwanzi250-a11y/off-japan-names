@@ -68,11 +68,11 @@ How it was made: the links were proposed by AI (Claude) from the OFF name, brand
 | | Rows |
 |---|---:|
 | `link_type = K1` | 381 |
-| `link_type = K2` | 467 |
-| `link_type = K3` | 0 |
-| **Rows in `off-alias.csv`** (700 names) | **848** |
+| `link_type = K2` | 1294 |
+| `link_type = K3` | 1197 |
+| **Rows in `off-alias.csv`** (2560 names) | **2872** |
 
-The links are added in batches; this is the first batch. / つなぎは何回かに分けて足します（これは1回目）。
+The links were added in batches: batch 1 on 2026-10-31 (848 rows), and batches 2–4 on 2026-11-01 (all the remaining links from the sorting). / つなぎは何回かに分けて足しました（2026-10-31 に1回目の 848 行・2026-11-01 に2〜4回目＝仕分けたつなぎの残り全部）。
 
 ## Corrections / 直した行（2026-10-30）
 
