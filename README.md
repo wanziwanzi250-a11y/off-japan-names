@@ -19,6 +19,7 @@ Japanese product names for barcodes (JAN / EAN) of products sold in Japan, deriv
 | File | Contents |
 |---|---|
 | `off-jp-names.csv` | One row per barcode. UTF-8 (no BOM), LF, RFC 4180 quoting. |
+| `off-alias.csv` | Links from names in `off-jp-names.csv` to generic item names (added 2026-10-31). One row per barcode. Same encoding. |
 | `LICENSE` | ODbL 1.0 and DbCL 1.0, full texts. |
 
 ## Columns / 列
@@ -46,6 +47,32 @@ Japanese product names for barcodes (JAN / EAN) of products sold in Japan, deriv
 6. Corrections (2026-10-30): rows whose OFF name was found not to be a product name, or to name a different product, were corrected by hand after checking retailer pages and the OFF photo. A corrected row has `name_ja_source = ai`; `name_orig` is the main-language OFF name.
 
 訳（`ai` の行）は機械の訳です。誤りがありえます。見つけたらお知らせください。
+
+## `off-alias.csv`: links to generic items / 品目へのつなぎ（2026-10-31〜）
+
+Links from product names in `off-jp-names.csv` to the generic item names of the item table used by the app “スマート冷蔵庫” (Digicle), to choose its estimated shelf life, storage place and nutrition. The item table itself (shelf life, storage, nutrition values, pictures) is **not** part of this database and is not included.
+
+`off-jp-names.csv` の商品名を、アプリ「スマート冷蔵庫」（Digicle）の品目の表の行の名前（一般名）につないだ表です。アプリはこのつなぎで、期限の目安・置き場所・栄養を選びます。品目の表そのもの（期限・置き場所・栄養の値・絵）はこの表に入っていません。
+
+| Column | Meaning |
+|---|---|
+| `code` | Barcode, same as `off-jp-names.csv`. |
+| `name_ja` | The `name_ja` of the same row in `off-jp-names.csv`. |
+| `item` | The generic item name the product is linked to. / つなぐ先の品目の名前 |
+| `link_type` | `K1` = the same item; only the maker name or symbols differ. `K2` = the same kind of item, differing in flavor, size or container. `K3` = a brand name linked to its generic item. / `K1`＝社名・記号だけ違う・`K2`＝味・大きさ・容器の違い・`K3`＝銘柄 → 一般名 |
+
+How it was made: the links were proposed by AI (Claude) from the OFF name, brands, quantity and categories; checked by rules (storage place and type of shelf life against the OFF categories and the name); and, for names whose estimated shelf life changes by 3 times or more, confirmed against the OFF photo and maker or retailer pages (this check was also done with AI assistance). Names that could not be decided are not linked. **Links may be wrong**; please report errors (see Contact).
+
+作り方：OFF の名前・ブランド・量・分類から AI（Claude）がつなぐ先を出し、置き場所と期限の種類を OFF の分類と名前で照らし、期限の目安が3倍以上変わる名前は OFF の写真とメーカー・小売のページで確かめました（この確かめも AI を使って行いました）。決められなかった名前はつないでいません。誤りがありえます。見つけたらお知らせください。
+
+| | Rows |
+|---|---:|
+| `link_type = K1` | 381 |
+| `link_type = K2` | 467 |
+| `link_type = K3` | 0 |
+| **Rows in `off-alias.csv`** (700 names) | **848** |
+
+The links are added in batches; this is the first batch. / つなぎは何回かに分けて足します（これは1回目）。
 
 ## Corrections / 直した行（2026-10-30）
 
