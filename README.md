@@ -74,10 +74,10 @@ For `K4` (2026-11-01), the new item names are generic names written by us, not O
 | `link_type = K1` | 381 |
 | `link_type = K2` | 1294 |
 | `link_type = K3` | 1213 |
-| `link_type = K4` | 295 |
-| **Rows in `off-alias.csv`** (2856 names) | **3183** |
+| `link_type = K4` | 296 |
+| **Rows in `off-alias.csv`** (2857 names) | **3184** |
 
-The links were added in batches: batch 1 on 2026-10-31 (848 rows), batches 2–4 on 2026-11-01 (all the remaining links from the sorting), batch 5 on 2026-11-01 (285 rows, mostly `K4`), and batch 6 on 2026-11-01 (26 rows for 25 names, `K3` 1, `K4` 25: names whose links had been left for a decision). / つなぎは何回かに分けて足しました（2026-10-31 に1回目の 848 行・2026-11-01 に2〜4回目＝仕分けたつなぎの残り全部・2026-11-01 に5回目の 285 行＝主に `K4`・2026-11-01 に6回目の 26 行（名前 25・`K3` 1・`K4` 25）＝つなぐかどうかを決めかねていた名前）。
+The links were added in batches: batch 1 on 2026-10-31 (848 rows), batches 2–4 on 2026-11-01 (all the remaining links from the sorting), batch 5 on 2026-11-01 (285 rows, mostly `K4`), batch 6 on 2026-11-01 (26 rows for 25 names, `K3` 1, `K4` 25: names whose links had been left for a decision), and batch 7 on 2026-11-02 (1 row for 1 name, `K4` 1: a name still left for a decision after batch 6). / つなぎは何回かに分けて足しました（2026-10-31 に1回目の 848 行・2026-11-01 に2〜4回目＝仕分けたつなぎの残り全部・2026-11-01 に5回目の 285 行＝主に `K4`・2026-11-01 に6回目の 26 行（名前 25・`K3` 1・`K4` 25）＝つなぐかどうかを決めかねていた名前・2026-11-02 に7回目の 1 行（名前 1・`K4` 1）＝6回目のあとも決めかねていた名前）。
 
 ## Corrections / 直した行（2026-10-30）
 
