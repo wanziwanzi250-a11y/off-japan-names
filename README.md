@@ -59,20 +59,25 @@ Links from product names in `off-jp-names.csv` to the generic item names of the 
 | `code` | Barcode, same as `off-jp-names.csv`. |
 | `name_ja` | The `name_ja` of the same row in `off-jp-names.csv`. |
 | `item` | The generic item name the product is linked to. / つなぐ先の品目の名前 |
-| `link_type` | `K1` = the same item; only the maker name or symbols differ. `K2` = the same kind of item, differing in flavor, size or container. `K3` = a brand name linked to its generic item. / `K1`＝社名・記号だけ違う・`K2`＝味・大きさ・容器の違い・`K3`＝銘柄 → 一般名 |
+| `link_type` | `K1` = the same item; only the maker name or symbols differ. `K2` = the same kind of item, differing in flavor, size or container. `K3` = a brand name linked to its generic item. `K4` = no generic item matched, so a new generic item name was added to the item table and the product was linked to it (added 2026-11-01). / `K1`＝社名・記号だけ違う・`K2`＝味・大きさ・容器の違い・`K3`＝銘柄 → 一般名・`K4`＝合う品目が無く、品目の表に新しい一般名の行を足してつないだ（2026-11-01〜） |
 
 How it was made: the links were proposed by AI (Claude) from the OFF name, brands, quantity and categories; checked by rules (storage place and type of shelf life against the OFF categories and the name); and, for names whose estimated shelf life changes by 3 times or more, confirmed against the OFF photo and maker or retailer pages (this check was also done with AI assistance). Names that could not be decided are not linked. **Links may be wrong**; please report errors (see Contact).
 
 作り方：OFF の名前・ブランド・量・分類から AI（Claude）がつなぐ先を出し、置き場所と期限の種類を OFF の分類と名前で照らし、期限の目安が3倍以上変わる名前は OFF の写真とメーカー・小売のページで確かめました（この確かめも AI を使って行いました）。決められなかった名前はつないでいません。誤りがありえます。見つけたらお知らせください。
 
+For `K4` (2026-11-01), the new item names are generic names written by us, not OFF names or brands, and the values of the new item rows (shelf life, storage, nutrition) were decided from maker and retailer pages (mostly Japanese) and the Standard Tables of Food Composition in Japan, not from Open Food Facts; their pictures are reused from similar existing items. A product is linked only when its storage place matches the new item and its estimated shelf life does not change by 3 times or more (or was confirmed as above).
+
+`K4`（2026-11-01）の新しい品目の名前は、OFF の名前や銘柄ではなく、私たちが書いた一般名です。新しい行の値（期限・置き場所・栄養）は、メーカー・小売のページ（主に日本）と日本食品標準成分表で決め、Open Food Facts には拠っていません。絵は似た今の品目の絵を使っています。つなぐのは、置き場所が新しい品目と同じで、期限の目安が3倍以上変わらない名前（変わる名前は上と同じく確かめた名前）だけです。
+
 | | Rows |
 |---|---:|
 | `link_type = K1` | 381 |
 | `link_type = K2` | 1294 |
-| `link_type = K3` | 1197 |
-| **Rows in `off-alias.csv`** (2560 names) | **2872** |
+| `link_type = K3` | 1212 |
+| `link_type = K4` | 270 |
+| **Rows in `off-alias.csv`** (2831 names) | **3157** |
 
-The links were added in batches: batch 1 on 2026-10-31 (848 rows), and batches 2–4 on 2026-11-01 (all the remaining links from the sorting). / つなぎは何回かに分けて足しました（2026-10-31 に1回目の 848 行・2026-11-01 に2〜4回目＝仕分けたつなぎの残り全部）。
+The links were added in batches: batch 1 on 2026-10-31 (848 rows), batches 2–4 on 2026-11-01 (all the remaining links from the sorting), and batch 5 on 2026-11-01 (285 rows, mostly `K4`). / つなぎは何回かに分けて足しました（2026-10-31 に1回目の 848 行・2026-11-01 に2〜4回目＝仕分けたつなぎの残り全部・2026-11-01 に5回目の 285 行＝主に `K4`）。
 
 ## Corrections / 直した行（2026-10-30）
 
