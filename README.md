@@ -72,12 +72,43 @@ For `K4` (2026-11-01), the new item names are generic names written by us, not O
 | | Rows |
 |---|---:|
 | `link_type = K1` | 381 |
-| `link_type = K2` | 1294 |
-| `link_type = K3` | 1213 |
-| `link_type = K4` | 296 |
-| **Rows in `off-alias.csv`** (2857 names) | **3184** |
+| `link_type = K2` | 1292 |
+| `link_type = K3` | 1205 |
+| `link_type = K4` | 295 |
+| **Rows in `off-alias.csv`** (2846 names) | **3173** |
 
-The links were added in batches: batch 1 on 2026-10-31 (848 rows), batches 2–4 on 2026-11-01 (all the remaining links from the sorting), batch 5 on 2026-11-01 (285 rows, mostly `K4`), batch 6 on 2026-11-01 (26 rows for 25 names, `K3` 1, `K4` 25: names whose links had been left for a decision), and batch 7 on 2026-11-02 (1 row for 1 name, `K4` 1: a name still left for a decision after batch 6). / つなぎは何回かに分けて足しました（2026-10-31 に1回目の 848 行・2026-11-01 に2〜4回目＝仕分けたつなぎの残り全部・2026-11-01 に5回目の 285 行＝主に `K4`・2026-11-01 に6回目の 26 行（名前 25・`K3` 1・`K4` 25）＝つなぐかどうかを決めかねていた名前・2026-11-02 に7回目の 1 行（名前 1・`K4` 1）＝6回目のあとも決めかねていた名前）。
+The links were added in batches: batch 1 on 2026-10-31 (848 rows), batches 2–4 on 2026-11-01 (all the remaining links from the sorting), batch 5 on 2026-11-01 (285 rows, mostly `K4`), batch 6 on 2026-11-01 (26 rows for 25 names, `K3` 1, `K4` 25: names whose links had been left for a decision), and batch 7 on 2026-11-02 (1 row for 1 name, `K4` 1: a name still left for a decision after batch 6). On 2026-11-02, after a review, 11 rows were removed and 7 rows were linked to a different item (see “Changes to links” below). / つなぎは何回かに分けて足しました（2026-10-31 に1回目の 848 行・2026-11-01 に2〜4回目＝仕分けたつなぎの残り全部・2026-11-01 に5回目の 285 行＝主に `K4`・2026-11-01 に6回目の 26 行（名前 25・`K3` 1・`K4` 25）＝つなぐかどうかを決めかねていた名前・2026-11-02 に7回目の 1 行（名前 1・`K4` 1）＝6回目のあとも決めかねていた名前）。2026-11-02 に、見直しで 11 行を外し、7 行のつなぐ先を替えました（下の「つなぎの直し」）。
+
+## Changes to links / つなぎの直し（2026-11-02）
+
+On 2026-11-02, after a review of the item table, 11 rows were removed from `off-alias.csv` and 7 rows (4 names) were linked to a different item; no row was added. The app applies a link to every product with the same name, not only to the barcode in this table. So a link was removed when the name alone does not tell the form of the product (for example, dried or chilled noodles, or fresh apples or juice) and the link chose a much longer estimated shelf life than the common form in Japanese supermarkets. A link was changed when the maker's or a retailer's page showed that the product is a different kind of item.
+
+2026-11-02 に、品目の表の見直しで、`off-alias.csv` の 11 行を外し、7 行（名前 4）のつなぐ先を替えました（足した行はありません）。アプリは、この表のバーコードの品だけでなく、同じ名前の品すべてにつなぎを使います。そこで、名前だけでは品の形（乾麺かチルドか・生のりんごかジュースか など）が決まらず、つなぐと日本のスーパーで多い形より期限の目安がずっと長くなる名前は、つなぎを外しました。つなぐ先を替えたのは、メーカーや小売のページで別の種類の品と分かった行です。
+
+| `code` | `name_ja` | Before / 前 | After / 後 | Why / 理由 |
+|---|---|---|---|---|
+| `4529329000042` | 桜うどん | うどん 乾麺 (`K3`) | — (removed / 外した) | the name does not tell dried from chilled or boiled noodles / 乾麺かチルド・ゆでか名前で決まらない |
+| `4901166008519` | 讃岐うどん | うどん 乾麺 (`K3`) | — (removed / 外した) | the name does not tell dried from chilled or boiled noodles / 乾麺かチルド・ゆでか名前で決まらない |
+| `4901726014875` | 田舎うどん | うどん 乾麺 (`K3`) | — (removed / 外した) | the name does not tell dried from chilled or boiled noodles / 乾麺かチルド・ゆでか名前で決まらない |
+| `4902110393279` | 信州そば | 乾麺 そば (`K3`) | — (removed / 外した) | the name does not tell dried from chilled or boiled noodles / 乾麺かチルド・ゆでか名前で決まらない |
+| `4902663009535` | 天ぷらうどん | インスタント麺 (`K3`) | — (removed / 外した) | the name does not tell a ready meal or chilled noodles from a cup noodle / 惣菜・チルドの麺かカップ麺か名前で決まらない |
+| `4904977033251` | しいたけ豆 | 豆の缶詰 (`K4`) | — (removed / 外した) | Japanese 〜豆 products are usually simmered beans, not canned beans / 国内の「〜豆」は多くが煮豆（缶詰ではない） |
+| `4908209500290` | 青森りんご | りんごジュース (`K3`) | — (removed / 外した) | on receipts, usually fresh apples, not juice / レシートでは多くが生のりんご（ジュースではない） |
+| `4942355154556` | きのこパスタ | パスタ 500g (`K2`) | — (removed / 外した) | in supermarkets, a ready or frozen dish, not dried pasta / スーパーでは惣菜か冷凍の料理（乾燥パスタではない） |
+| `4942355602170` | えびピラフ | 冷凍ピラフ (`K3`) | — (removed / 外した) | without 冷凍 (frozen) in the name, usually a ready meal / 名前に「冷凍」が無ければ多くは惣菜 |
+| `4970083030026` | 蔵王高原そば | 乾麺 そば (`K3`) | — (removed / 外した) | the name does not tell dried from chilled or boiled noodles / 乾麺かチルド・ゆでか名前で決まらない |
+| `4972328630459` | 全粒そば | 乾麺 そば (`K3`) | — (removed / 外した) | the name does not tell dried from chilled or boiled noodles / 乾麺かチルド・ゆでか名前で決まらない |
+| `4901005122475` | グリコ ペロティ | 飴 (`K3`) | 棒付きチョコ (`K3`) | a chocolate on a stick (maker's page), not a candy / 棒付きのチョコレート（メーカーのページ）・飴ではない |
+| `4901111201668` | スティック 紅茶オレ 華やかロイヤルミルクティー | ブレンディ スティック (`K2`) | 粉末ミルクティー (`K3`) | a milk tea powder (maker's page), not a coffee stick / ミルクティーの粉（メーカーのページ）・コーヒーのスティックではない |
+| `4909411076658` | キリン ミルクティー | 午後の紅茶 (`K2`) | 午後の紅茶 ミルクティー (`K2`) | milk tea with milk and sugar; the item before was plain tea / 乳と砂糖の入ったミルクティー・前の品目は紅茶だけ |
+| `4909411076870` | キリン ミルクティー | 午後の紅茶 (`K2`) | 午後の紅茶 ミルクティー (`K2`) | milk tea with milk and sugar; the item before was plain tea / 乳と砂糖の入ったミルクティー・前の品目は紅茶だけ |
+| `4909411084950` | キリン ミルクティー | 午後の紅茶 (`K2`) | 午後の紅茶 ミルクティー (`K2`) | milk tea with milk and sugar; the item before was plain tea / 乳と砂糖の入ったミルクティー・前の品目は紅茶だけ |
+| `4909411086299` | キリン ミルクティー | 午後の紅茶 (`K2`) | 午後の紅茶 ミルクティー (`K2`) | milk tea with milk and sugar; the item before was plain tea / 乳と砂糖の入ったミルクティー・前の品目は紅茶だけ |
+| `6901721497459` | マクスウェルハウス ミルクコーヒー | インスタントコーヒー (`K3`) | スティックコーヒー (`K3`) | a 3-in-1 stick (coffee, creamer and sugar), not black instant coffee / コーヒー・クリーマー・砂糖のスティック・ブラックの粉ではない |
+
+棒付きチョコ and 午後の紅茶 ミルクティー were added to the item table in this review. As with `K4`, their values were decided from maker pages and the Standard Tables of Food Composition in Japan, not from Open Food Facts.
+
+棒付きチョコ と 午後の紅茶 ミルクティー は、この見直しで品目の表に足した品目です。`K4` と同じく、値はメーカーのページと日本食品標準成分表で決め、Open Food Facts には拠っていません。
 
 ## Corrections / 直した行（2026-10-30）
 
