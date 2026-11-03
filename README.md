@@ -72,12 +72,24 @@ For `K4` (2026-11-01), the new item names are generic names written by us, not O
 | | Rows |
 |---|---:|
 | `link_type = K1` | 381 |
-| `link_type = K2` | 1292 |
+| `link_type = K2` | 1289 |
 | `link_type = K3` | 1205 |
 | `link_type = K4` | 310 |
-| **Rows in `off-alias.csv`** (2861 names) | **3188** |
+| **Rows in `off-alias.csv`** (2858 names) | **3185** |
 
-The links were added in batches: batch 1 on 2026-10-31 (848 rows), batches 2–4 on 2026-11-01 (all the remaining links from the sorting), batch 5 on 2026-11-01 (285 rows, mostly `K4`), batch 6 on 2026-11-01 (26 rows for 25 names, `K3` 1, `K4` 25: names whose links had been left for a decision), and batch 7 on 2026-11-02 (1 row for 1 name, `K4` 1: a name still left for a decision after batch 6). On 2026-11-02, after a review, 11 rows were removed and 7 rows were linked to a different item (see “Changes to links” below). Batch 8 on 2026-11-02 added 15 rows for 15 names (`K4` 15: the last names left for a decision, linked to 2 generic item names newly added to the item table). / つなぎは何回かに分けて足しました（2026-10-31 に1回目の 848 行・2026-11-01 に2〜4回目＝仕分けたつなぎの残り全部・2026-11-01 に5回目の 285 行＝主に `K4`・2026-11-01 に6回目の 26 行（名前 25・`K3` 1・`K4` 25）＝つなぐかどうかを決めかねていた名前・2026-11-02 に7回目の 1 行（名前 1・`K4` 1）＝6回目のあとも決めかねていた名前）。2026-11-02 に、見直しで 11 行を外し、7 行のつなぐ先を替えました（下の「つなぎの直し」）。2026-11-02 に8回目の 15 行（名前 15・`K4` 15）＝最後まで決めかねていた名前を、品目の表に新しく足した 2 つの品目につなぎました。
+The links were added in batches: batch 1 on 2026-10-31 (848 rows), batches 2–4 on 2026-11-01 (all the remaining links from the sorting), batch 5 on 2026-11-01 (285 rows, mostly `K4`), batch 6 on 2026-11-01 (26 rows for 25 names, `K3` 1, `K4` 25: names whose links had been left for a decision), and batch 7 on 2026-11-02 (1 row for 1 name, `K4` 1: a name still left for a decision after batch 6). On 2026-11-02, after a review, 11 rows were removed and 7 rows were linked to a different item (see “Changes to links” below). Batch 8 on 2026-11-02 added 15 rows for 15 names (`K4` 15: the last names left for a decision, linked to 2 generic item names newly added to the item table). On 2026-11-03, 3 rows for 3 names were removed because the app now finds these names in the item table directly (see “Changes to links” below). / つなぎは何回かに分けて足しました（2026-10-31 に1回目の 848 行・2026-11-01 に2〜4回目＝仕分けたつなぎの残り全部・2026-11-01 に5回目の 285 行＝主に `K4`・2026-11-01 に6回目の 26 行（名前 25・`K3` 1・`K4` 25）＝つなぐかどうかを決めかねていた名前・2026-11-02 に7回目の 1 行（名前 1・`K4` 1）＝6回目のあとも決めかねていた名前）。2026-11-02 に、見直しで 11 行を外し、7 行のつなぐ先を替えました（下の「つなぎの直し」）。2026-11-02 に8回目の 15 行（名前 15・`K4` 15）＝最後まで決めかねていた名前を、品目の表に新しく足した 2 つの品目につなぎました。2026-11-03 に、3 行（名前 3）を外しました＝アプリが品目の表でこの名前を直接引けるようになったためです（下の「つなぎの直し」）。
+
+## Changes to links / つなぎの直し（2026-11-03）
+
+On 2026-11-03, 3 rows were removed from `off-alias.csv`; no row was added or linked to a different item. The app now ignores a place of origin written in brackets or at the start of a name (for example （イタリア産） or フランス産) and looks up the rest of the name in the item table. These names now reach the same item as their link without this table, so the links were removed. The estimated shelf life and storage for these products do not change.
+
+2026-11-03 に、`off-alias.csv` の 3 行を外しました（足した行・つなぐ先を替えた行はありません）。アプリが、括弧の中や名前の頭の産地（（イタリア産）・フランス産 など）を外して、残りの名前で品目の表を引くようになりました。この名前は、この表が無くても、つないでいた品目と同じ品目に当たります。そこでつなぎを外しました。この品の期限の目安と置き場所は変わりません。
+
+| `code` | `name_ja` | Before / 前 | After / 後 | Why / 理由 |
+|---|---|---|---|---|
+| `4560148204211` | フィリピン産ドライマンゴー | ドライマンゴー (`K2`) | — (removed / 外した) | the app ignores フィリピン産 (from the Philippines) at the start and finds ドライマンゴー directly / 頭の フィリピン産を外して ドライマンゴー を直接引く |
+| `4568123563544` | ぶどう（イタリア産） | ぶどう (`K2`) | — (removed / 外した) | the app ignores （イタリア産） (from Italy) in brackets and finds ぶどう directly / 括弧の（イタリア産）を外して ぶどう を直接引く |
+| `4902033803725` | フランス産ブリーチーズ | ブリーチーズ (`K2`) | — (removed / 外した) | the app ignores フランス産 (from France) at the start and finds ブリーチーズ directly / 頭の フランス産を外して ブリーチーズ を直接引く |
 
 ## Changes to links / つなぎの直し（2026-11-02）
 
