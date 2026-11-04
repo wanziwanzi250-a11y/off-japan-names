@@ -72,12 +72,27 @@ For `K4` (2026-11-01), the new item names are generic names written by us, not O
 | | Rows |
 |---|---:|
 | `link_type = K1` | 381 |
-| `link_type = K2` | 1289 |
+| `link_type = K2` | 1288 |
 | `link_type = K3` | 1205 |
 | `link_type = K4` | 310 |
-| **Rows in `off-alias.csv`** (2858 names) | **3185** |
+| **Rows in `off-alias.csv`** (2857 names) | **3184** |
 
-The links were added in batches: batch 1 on 2026-10-31 (848 rows), batches 2–4 on 2026-11-01 (all the remaining links from the sorting), batch 5 on 2026-11-01 (285 rows, mostly `K4`), batch 6 on 2026-11-01 (26 rows for 25 names, `K3` 1, `K4` 25: names whose links had been left for a decision), and batch 7 on 2026-11-02 (1 row for 1 name, `K4` 1: a name still left for a decision after batch 6). On 2026-11-02, after a review, 11 rows were removed and 7 rows were linked to a different item (see “Changes to links” below). Batch 8 on 2026-11-02 added 15 rows for 15 names (`K4` 15: the last names left for a decision, linked to 2 generic item names newly added to the item table). On 2026-11-03, 3 rows for 3 names were removed because the app now finds these names in the item table directly (see “Changes to links” below). / つなぎは何回かに分けて足しました（2026-10-31 に1回目の 848 行・2026-11-01 に2〜4回目＝仕分けたつなぎの残り全部・2026-11-01 に5回目の 285 行＝主に `K4`・2026-11-01 に6回目の 26 行（名前 25・`K3` 1・`K4` 25）＝つなぐかどうかを決めかねていた名前・2026-11-02 に7回目の 1 行（名前 1・`K4` 1）＝6回目のあとも決めかねていた名前）。2026-11-02 に、見直しで 11 行を外し、7 行のつなぐ先を替えました（下の「つなぎの直し」）。2026-11-02 に8回目の 15 行（名前 15・`K4` 15）＝最後まで決めかねていた名前を、品目の表に新しく足した 2 つの品目につなぎました。2026-11-03 に、3 行（名前 3）を外しました＝アプリが品目の表でこの名前を直接引けるようになったためです（下の「つなぎの直し」）。
+The links were added in batches: batch 1 on 2026-10-31 (848 rows), batches 2–4 on 2026-11-01 (all the remaining links from the sorting), batch 5 on 2026-11-01 (285 rows, mostly `K4`), batch 6 on 2026-11-01 (26 rows for 25 names, `K3` 1, `K4` 25: names whose links had been left for a decision), and batch 7 on 2026-11-02 (1 row for 1 name, `K4` 1: a name still left for a decision after batch 6). On 2026-11-02, after a review, 11 rows were removed and 7 rows were linked to a different item (see “Changes to links” below). Batch 8 on 2026-11-02 added 15 rows for 15 names (`K4` 15: the last names left for a decision, linked to 2 generic item names newly added to the item table). On 2026-11-03, 3 rows for 3 names were removed because the app now finds these names in the item table directly (see “Changes to links” below). On 2026-11-04, 1 row for 1 name was removed for the same kind of reason, and 1 row was linked to a different item (see “Changes to links” below). / つなぎは何回かに分けて足しました（2026-10-31 に1回目の 848 行・2026-11-01 に2〜4回目＝仕分けたつなぎの残り全部・2026-11-01 に5回目の 285 行＝主に `K4`・2026-11-01 に6回目の 26 行（名前 25・`K3` 1・`K4` 25）＝つなぐかどうかを決めかねていた名前・2026-11-02 に7回目の 1 行（名前 1・`K4` 1）＝6回目のあとも決めかねていた名前）。2026-11-02 に、見直しで 11 行を外し、7 行のつなぐ先を替えました（下の「つなぎの直し」）。2026-11-02 に8回目の 15 行（名前 15・`K4` 15）＝最後まで決めかねていた名前を、品目の表に新しく足した 2 つの品目につなぎました。2026-11-03 に、3 行（名前 3）を外しました＝アプリが品目の表でこの名前を直接引けるようになったためです（下の「つなぎの直し」）。2026-11-04 に、同じわけで 1 行（名前 1）を外し、1 行のつなぐ先を替えました（下の「つなぎの直し」）。
+
+## Changes to links / つなぎの直し（2026-11-04）
+
+On 2026-11-04, 1 row was removed from `off-alias.csv` and 1 row was linked to a different item; no row was added. The app now ignores a word at the end or the start of a name saying that no sugar is used or that sugar is reduced (for example 砂糖不使用 or 砂糖控えめ) and looks up the rest of the name in the item table. アーモンド効果 砂糖不使用 now reaches the same item as its link without this table, so the link was removed. エールマン ハイプロテイン プレーン is a high-protein plain yogurt, but it was linked to plain yogurt, which has much less protein; it is now linked to a new generic item for high-protein yogurt. The estimated shelf life and storage for these two products do not change.
+
+2026-11-04 に、`off-alias.csv` の 1 行を外し、1 行のつなぐ先を替えました（足した行はありません）。アプリが、名前の最後か頭にある、砂糖を使っていない・控えた旨の語（砂糖不使用・砂糖控えめ など）を外して、残りの名前で品目の表を引くようになりました。アーモンド効果 砂糖不使用 は、この表が無くても、つないでいた品目と同じ品目に当たります。そこでつなぎを外しました。エールマン ハイプロテイン プレーン は高たんぱくのプレーンヨーグルトなのに、たんぱく質がずっと少ない普通のプレーンヨーグルトにつないでいました。高たんぱくのヨーグルトの新しい一般名の品目につなぎ替えました。この2つの品の期限の目安と置き場所は変わりません。
+
+| `code` | `name_ja` | Before / 前 | After / 後 | Why / 理由 |
+|---|---|---|---|---|
+| `4971666488630` | アーモンド効果 砂糖不使用 | アーモンド効果 (`K2`) | — (removed / 外した) | the app ignores 砂糖不使用 (no sugar used) at the end and finds アーモンド効果 directly / 最後の 砂糖不使用 を外して アーモンド効果 を直接引く |
+| `4902971381804` | エールマン ハイプロテイン プレーン | プレーンヨーグルト (`K3`) | 高たんぱくヨーグルト (`K3`) | a high-protein plain yogurt; plain yogurt has much less protein / 高たんぱくのプレーンヨーグルト・普通のプレーンヨーグルトはたんぱく質がずっと少ない |
+
+高たんぱくヨーグルト was added to the item table in this review. Its values were estimated with AI assistance from the Standard Tables of Food Composition in Japan (non-fat plain yogurt) and, for calcium, a maker's value for a similar yogurt. Only the protein value (9.3 g per 100 g) was taken from the nutrition facts of this product as registered in Open Food Facts, because no maker's value was found; it is within the range of the makers' values for similar yogurts sold in Japan.
+
+高たんぱくヨーグルト は、この見直しで品目の表に足した品目です。値は、日本食品標準成分表（ヨーグルト 無脂肪無糖）と、カルシウムは同じ形のヨーグルトのメーカーの値を元に、AI を使って推定しました。メーカーの値が見つからなかったため、たんぱく質（100g あたり 9.3g）だけは、この品の Open Food Facts の登録の栄養成分表示の値を使いました（日本で売られている同じ形のヨーグルトのメーカーの値の範囲の中です）。
 
 ## Changes to links / つなぎの直し（2026-11-03）
 
