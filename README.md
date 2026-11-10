@@ -72,12 +72,62 @@ For `K4` (2026-11-01), the new item names are generic names written by us, not O
 | | Rows |
 |---|---:|
 | `link_type = K1` | 381 |
-| `link_type = K2` | 1288 |
-| `link_type = K3` | 1205 |
-| `link_type = K4` | 310 |
-| **Rows in `off-alias.csv`** (2857 names) | **3184** |
+| `link_type = K2` | 1278 |
+| `link_type = K3` | 1201 |
+| `link_type = K4` | 309 |
+| **Rows in `off-alias.csv`** (2844 names) | **3169** |
 
-The links were added in batches: batch 1 on 2026-10-31 (848 rows), batches 2–4 on 2026-11-01 (all the remaining links from the sorting), batch 5 on 2026-11-01 (285 rows, mostly `K4`), batch 6 on 2026-11-01 (26 rows for 25 names, `K3` 1, `K4` 25: names whose links had been left for a decision), and batch 7 on 2026-11-02 (1 row for 1 name, `K4` 1: a name still left for a decision after batch 6). On 2026-11-02, after a review, 11 rows were removed and 7 rows were linked to a different item (see “Changes to links” below). Batch 8 on 2026-11-02 added 15 rows for 15 names (`K4` 15: the last names left for a decision, linked to 2 generic item names newly added to the item table). On 2026-11-03, 3 rows for 3 names were removed because the app now finds these names in the item table directly (see “Changes to links” below). On 2026-11-04, 1 row for 1 name was removed for the same kind of reason, and 1 row was linked to a different item (see “Changes to links” below). On 2026-11-05, 1 row was linked to a different item (see “Changes to links” below). / つなぎは何回かに分けて足しました（2026-10-31 に1回目の 848 行・2026-11-01 に2〜4回目＝仕分けたつなぎの残り全部・2026-11-01 に5回目の 285 行＝主に `K4`・2026-11-01 に6回目の 26 行（名前 25・`K3` 1・`K4` 25）＝つなぐかどうかを決めかねていた名前・2026-11-02 に7回目の 1 行（名前 1・`K4` 1）＝6回目のあとも決めかねていた名前）。2026-11-02 に、見直しで 11 行を外し、7 行のつなぐ先を替えました（下の「つなぎの直し」）。2026-11-02 に8回目の 15 行（名前 15・`K4` 15）＝最後まで決めかねていた名前を、品目の表に新しく足した 2 つの品目につなぎました。2026-11-03 に、3 行（名前 3）を外しました＝アプリが品目の表でこの名前を直接引けるようになったためです（下の「つなぎの直し」）。2026-11-04 に、同じわけで 1 行（名前 1）を外し、1 行のつなぐ先を替えました（下の「つなぎの直し」）。2026-11-05 に、1 行のつなぐ先を替えました（下の「つなぎの直し」）。
+The links were added in batches: batch 1 on 2026-10-31 (848 rows), batches 2–4 on 2026-11-01 (all the remaining links from the sorting), batch 5 on 2026-11-01 (285 rows, mostly `K4`), batch 6 on 2026-11-01 (26 rows for 25 names, `K3` 1, `K4` 25: names whose links had been left for a decision), and batch 7 on 2026-11-02 (1 row for 1 name, `K4` 1: a name still left for a decision after batch 6). On 2026-11-02, after a review, 11 rows were removed and 7 rows were linked to a different item (see “Changes to links” below). Batch 8 on 2026-11-02 added 15 rows for 15 names (`K4` 15: the last names left for a decision, linked to 2 generic item names newly added to the item table). On 2026-11-03, 3 rows for 3 names were removed because the app now finds these names in the item table directly (see “Changes to links” below). On 2026-11-04, 1 row for 1 name was removed for the same kind of reason, and 1 row was linked to a different item (see “Changes to links” below). On 2026-11-05, 1 row was linked to a different item (see “Changes to links” below). On 2026-11-10, 15 rows for 13 names were removed, mostly because the app now finds these names in the item table directly, and 16 rows for 10 names were linked to a different item (see “Changes to links” below). / つなぎは何回かに分けて足しました（2026-10-31 に1回目の 848 行・2026-11-01 に2〜4回目＝仕分けたつなぎの残り全部・2026-11-01 に5回目の 285 行＝主に `K4`・2026-11-01 に6回目の 26 行（名前 25・`K3` 1・`K4` 25）＝つなぐかどうかを決めかねていた名前・2026-11-02 に7回目の 1 行（名前 1・`K4` 1）＝6回目のあとも決めかねていた名前）。2026-11-02 に、見直しで 11 行を外し、7 行のつなぐ先を替えました（下の「つなぎの直し」）。2026-11-02 に8回目の 15 行（名前 15・`K4` 15）＝最後まで決めかねていた名前を、品目の表に新しく足した 2 つの品目につなぎました。2026-11-03 に、3 行（名前 3）を外しました＝アプリが品目の表でこの名前を直接引けるようになったためです（下の「つなぎの直し」）。2026-11-04 に、同じわけで 1 行（名前 1）を外し、1 行のつなぐ先を替えました（下の「つなぎの直し」）。2026-11-05 に、1 行のつなぐ先を替えました（下の「つなぎの直し」）。2026-11-10 に、15 行（名前 13）を外し＝主にアプリが品目の表でこの名前を直接引けるようになったためです、16 行（名前 10）のつなぐ先を替えました（下の「つなぎの直し」）。
+
+## Changes to links / つなぎの直し（2026-11-10）
+
+On 2026-11-10, 15 rows were removed from `off-alias.csv` and 16 rows were linked to a different item; no row was added. This brings the table in line with the app as published on 2026-11-09 and 2026-11-10; the app changes of 2026-11-07 and 2026-11-08 had not been reflected here yet.
+
+- Removed: the app now ignores a word at the start of a name such as 有機 (organic), 特選 (premium selection) or 外国産 (imported) and looks up the rest of the name in the item table. These names now reach the same item as their link without this table (有機プーアル茶 reaches プーアル茶, a new item with the same estimated shelf life and storage as 茶葉), so the links were removed. The estimated shelf life and storage for these products do not change.
+- Linked to a different item: 白味噌 (white miso: a sweet, light-colored rice miso) and カンパーニュ (pain de campagne) were added to the item table on 2026-11-10. White miso products, which had been linked to 味噌 (miso), are now linked to 白味噌; their estimated shelf life becomes shorter (unopened at room temperature: 270 days → 180 days), and their nutrition values become those of sweet rice miso. パン・ド・カンパーニュ, which had been linked to パン (bread, 4 days), is now linked to カンパーニュ (2 days). ひかり味噌 信州白味噌 stays linked to 味噌, because 信州 (Shinshu) miso is the light-colored salty type that 味噌 stands for in the item table.
+
+2026-11-10 に、`off-alias.csv` の 15 行を外し、16 行のつなぐ先を替えました（足した行はありません）。2026-11-09 と 2026-11-10 に公開したアプリに、この表を合わせました。2026-11-07 と 2026-11-08 のアプリの直しを、ここにまだ写していませんでした。
+
+- 外した行：アプリが、名前の頭の 有機・特選・外国産 などの語を外して、残りの名前で品目の表を引くようになりました。この名前は、この表が無くても、つないでいた品目と同じ品目に当たります（有機プーアル茶 は、期限の目安と置き場所が 茶葉 と同じ新しい品目 プーアル茶 に当たります）。そこでつなぎを外しました。この品の期限の目安と置き場所は変わりません。
+- つなぐ先を替えた行：2026-11-10 に、品目の表に 白味噌（甘みそ）と カンパーニュ を足しました。味噌 につないでいた白みその品は 白味噌 につなぎ直し、期限の目安が短くなります（開ける前・常温 270日 → 180日）。栄養の値は甘みその値になります。パン（4日）につないでいた パン・ド・カンパーニュ は カンパーニュ（2日）につなぎ直しました。ひかり味噌 信州白味噌 は 味噌 のままです＝品目の表の 味噌 は、信州みそ型の淡色の辛口みそを表すためです。
+
+| `code` | `name_ja` | Before / 前 | After / 後 | Why / 理由 |
+|---|---|---|---|---|
+| `4531711001667` | 有機プーアル茶 | 茶葉 (`K4`) | — (removed / 外した) | the app ignores 有機 (organic) at the start and finds プーアル茶, an item added on 2026-11-08 with the same estimated shelf life and storage as 茶葉 / 頭の 有機 を外して、11/8 に足した品目 プーアル茶 を直接引く（期限の目安と置き場所は 茶葉 と同じ） |
+| `4543361964292` | 有機緑茶 | 緑茶 (`K3`) | — (removed / 外した) | the app ignores 有機 (organic) at the start and finds 緑茶 directly / 頭の 有機 を外して 緑茶 を直接引く |
+| `4901027661464` | 有機緑茶 | 緑茶 (`K3`) | — (removed / 外した) | the app ignores 有機 (organic) at the start and finds 緑茶 directly / 頭の 有機 を外して 緑茶 を直接引く |
+| `45648465` | 有機たまご | 卵 (`K2`) | — (removed / 外した) | the app ignores 有機 (organic) at the start and finds 卵 directly / 頭の 有機 を外して 卵 を直接引く |
+| `4902713128421` | 有機みそ | 味噌 (`K2`) | — (removed / 外した) | the app ignores 有機 (organic) at the start and finds 味噌 directly / 頭の 有機 を外して 味噌 を直接引く |
+| `4902856434052` | 特選 白だし | 白だし (`K2`) | — (removed / 外した) | the app ignores 特選 (premium selection) at the start and finds 白だし directly / 頭の 特選 を外して 白だし を直接引く |
+| `4903016041561` | 有機きなこ | きなこ (`K2`) | — (removed / 外した) | the app ignores 有機 (organic) at the start and finds きなこ directly / 頭の 有機 を外して きなこ を直接引く |
+| `4909891100485` | 外国産 有機納豆 | 納豆 (`K2`) | — (removed / 外した) | the app ignores 外国産 (imported) and 有機 (organic) at the start and finds 納豆 directly / 頭の 外国産 と 有機 を外して 納豆 を直接引く |
+| `4912345678911` | 有機にんじん | にんじん (`K2`) | — (removed / 外した) | the app ignores 有機 (organic) at the start and finds にんじん directly / 頭の 有機 を外して にんじん を直接引く |
+| `4958325003304` | 有機抹茶 | 抹茶 (`K2`) | — (removed / 外した) | the app ignores 有機 (organic) at the start and finds 抹茶 directly / 頭の 有機 を外して 抹茶 を直接引く |
+| `4978784206979` | 有機抹茶 | 抹茶 (`K2`) | — (removed / 外した) | the app ignores 有機 (organic) at the start and finds 抹茶 directly / 頭の 有機 を外して 抹茶 を直接引く |
+| `4977858011365` | 有機減塩みそ | 味噌 (`K2`) | — (removed / 外した) | the app ignores 有機 (organic) at the start and finds 減塩みそ (low-salt miso), now another name of 味噌, directly / 頭の 有機 を外して、味噌 の別名に足した 減塩みそ を直接引く |
+| `4978784600234` | 有機玄米茶 | 玄米茶 (`K3`) | — (removed / 外した) | the app ignores 有機 (organic) at the start and finds 玄米茶 directly / 頭の 有機 を外して 玄米茶 を直接引く |
+| `4985810101108` | 有機煎茶 | 煎茶 (`K3`) | — (removed / 外した) | the app ignores 有機 (organic) at the start and finds 煎茶 directly / 頭の 有機 を外して 煎茶 を直接引く |
+| `8009004809963` | 有機トマトソース | トマトソース (`K2`) | — (removed / 外した) | the app ignores 有機 (organic) at the start and finds トマトソース directly / 頭の 有機 を外して トマトソース を直接引く |
+| `4901614003622` | 白みそ | 味噌 (`K2`) | 白味噌 (`K2`) | a white miso; 白味噌 (sweet, light-colored rice miso) was added to the item table on 2026-11-10 / 白みそ・11/10 に品目の表に足した 白味噌（甘みそ）へ |
+| `4902703011702` | 白みそ | 味噌 (`K2`) | 白味噌 (`K2`) | a white miso; 白味噌 (sweet, light-colored rice miso) was added to the item table on 2026-11-10 / 白みそ・11/10 に品目の表に足した 白味噌（甘みそ）へ |
+| `4904035402005` | 白みそ | 味噌 (`K2`) | 白味噌 (`K2`) | a white miso; 白味噌 (sweet, light-colored rice miso) was added to the item table on 2026-11-10 / 白みそ・11/10 に品目の表に足した 白味噌（甘みそ）へ |
+| `4904783000683` | 白みそ | 味噌 (`K2`) | 白味噌 (`K2`) | a white miso; 白味噌 (sweet, light-colored rice miso) was added to the item table on 2026-11-10 / 白みそ・11/10 に品目の表に足した 白味噌（甘みそ）へ |
+| `4978045600683` | 白みそ | 味噌 (`K2`) | 白味噌 (`K2`) | a white miso; 白味噌 (sweet, light-colored rice miso) was added to the item table on 2026-11-10 / 白みそ・11/10 に品目の表に足した 白味噌（甘みそ）へ |
+| `4978094999219` | 白みそ | 味噌 (`K2`) | 白味噌 (`K2`) | a white miso; 白味噌 (sweet, light-colored rice miso) was added to the item table on 2026-11-10 / 白みそ・11/10 に品目の表に足した 白味噌（甘みそ）へ |
+| `4902663012733` | ひかり味噌 有機白みそ | 味噌 (`K2`) | 白味噌 (`K2`) | a white miso; 白味噌 (sweet, light-colored rice miso) was added to the item table on 2026-11-10 / 白みそ・11/10 に品目の表に足した 白味噌（甘みそ）へ |
+| `4902663015567` | ひかり味噌 白みそ | 味噌 (`K2`) | 白味噌 (`K2`) | a white miso; 白味噌 (sweet, light-colored rice miso) was added to the item table on 2026-11-10 / 白みそ・11/10 に品目の表に足した 白味噌（甘みそ）へ |
+| `4902663014676` | ひかり味噌 西京みそ | 味噌 (`K2`) | 白味噌 (`K2`) | 西京みそ is a white miso; 白味噌 was added to the item table on 2026-11-10 / 西京みそ は白みその一つ・11/10 に足した 白味噌 へ |
+| `4902401145044` | ハナマルキ 白みそ | 味噌 (`K2`) | 白味噌 (`K2`) | a white miso; 白味噌 (sweet, light-colored rice miso) was added to the item table on 2026-11-10 / 白みそ・11/10 に品目の表に足した 白味噌（甘みそ）へ |
+| `4901614501753` | プレミアム 白みそ | 味噌 (`K2`) | 白味噌 (`K2`) | a white miso; 白味噌 (sweet, light-colored rice miso) was added to the item table on 2026-11-10 / 白みそ・11/10 に品目の表に足した 白味噌（甘みそ）へ |
+| `4902713128902` | マルコメ 白みそ | 味噌 (`K2`) | 白味噌 (`K2`) | a white miso; 白味噌 (sweet, light-colored rice miso) was added to the item table on 2026-11-10 / 白みそ・11/10 に品目の表に足した 白味噌（甘みそ）へ |
+| `4958325000389` | ムソー 白みそ | 味噌 (`K2`) | 白味噌 (`K2`) | a white miso; 白味噌 (sweet, light-colored rice miso) was added to the item table on 2026-11-10 / 白みそ・11/10 に品目の表に足した 白味噌（甘みそ）へ |
+| `4979369007622` | ヤマゲン 白みそ | 味噌 (`K2`) | 白味噌 (`K2`) | a white miso; 白味噌 (sweet, light-colored rice miso) was added to the item table on 2026-11-10 / 白みそ・11/10 に品目の表に足した 白味噌（甘みそ）へ |
+| `4979369123520` | ヤマゲン 白みそ | 味噌 (`K2`) | 白味噌 (`K2`) | a white miso; 白味噌 (sweet, light-colored rice miso) was added to the item table on 2026-11-10 / 白みそ・11/10 に品目の表に足した 白味噌（甘みそ）へ |
+| `4955638436577` | パン・ド・カンパーニュ | パン (`K3`) | カンパーニュ (`K3`) | pain de campagne; カンパーニュ was added to the item table on 2026-11-10 / パン・ド・カンパーニュ・11/10 に品目の表に足した カンパーニュ へ |
+
+白味噌 and カンパーニュ are generic item names written by us, not OFF names. Their nutrition values come from the Standard Tables of Food Composition in Japan (白味噌: rice miso, sweet type; カンパーニュ: French bread, as there is no row for pain de campagne), and their estimated shelf life from makers' and retailers' pages in Japan, not from Open Food Facts.
+
+白味噌 と カンパーニュ は、OFF の名前ではなく、私たちが書いた一般名です。栄養の値は日本食品標準成分表（白味噌＝米みそ 甘みそ・カンパーニュ＝カンパーニュの行が無いため フランスパン）、期限の目安は日本のメーカー・小売のページで決め、Open Food Facts には拠っていません。
 
 ## Changes to links / つなぎの直し（2026-11-05）
 
