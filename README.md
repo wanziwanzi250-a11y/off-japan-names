@@ -73,11 +73,26 @@ For `K4` (2026-11-01), the new item names are generic names written by us, not O
 |---|---:|
 | `link_type = K1` | 381 |
 | `link_type = K2` | 1278 |
-| `link_type = K3` | 1201 |
+| `link_type = K3` | 1199 |
 | `link_type = K4` | 309 |
-| **Rows in `off-alias.csv`** (2844 names) | **3169** |
+| **Rows in `off-alias.csv`** (2842 names) | **3167** |
 
-The links were added in batches: batch 1 on 2026-10-31 (848 rows), batches 2–4 on 2026-11-01 (all the remaining links from the sorting), batch 5 on 2026-11-01 (285 rows, mostly `K4`), batch 6 on 2026-11-01 (26 rows for 25 names, `K3` 1, `K4` 25: names whose links had been left for a decision), and batch 7 on 2026-11-02 (1 row for 1 name, `K4` 1: a name still left for a decision after batch 6). On 2026-11-02, after a review, 11 rows were removed and 7 rows were linked to a different item (see “Changes to links” below). Batch 8 on 2026-11-02 added 15 rows for 15 names (`K4` 15: the last names left for a decision, linked to 2 generic item names newly added to the item table). On 2026-11-03, 3 rows for 3 names were removed because the app now finds these names in the item table directly (see “Changes to links” below). On 2026-11-04, 1 row for 1 name was removed for the same kind of reason, and 1 row was linked to a different item (see “Changes to links” below). On 2026-11-05, 1 row was linked to a different item (see “Changes to links” below). On 2026-11-10, 15 rows for 13 names were removed, mostly because the app now finds these names in the item table directly, and 16 rows for 10 names were linked to a different item (see “Changes to links” below). / つなぎは何回かに分けて足しました（2026-10-31 に1回目の 848 行・2026-11-01 に2〜4回目＝仕分けたつなぎの残り全部・2026-11-01 に5回目の 285 行＝主に `K4`・2026-11-01 に6回目の 26 行（名前 25・`K3` 1・`K4` 25）＝つなぐかどうかを決めかねていた名前・2026-11-02 に7回目の 1 行（名前 1・`K4` 1）＝6回目のあとも決めかねていた名前）。2026-11-02 に、見直しで 11 行を外し、7 行のつなぐ先を替えました（下の「つなぎの直し」）。2026-11-02 に8回目の 15 行（名前 15・`K4` 15）＝最後まで決めかねていた名前を、品目の表に新しく足した 2 つの品目につなぎました。2026-11-03 に、3 行（名前 3）を外しました＝アプリが品目の表でこの名前を直接引けるようになったためです（下の「つなぎの直し」）。2026-11-04 に、同じわけで 1 行（名前 1）を外し、1 行のつなぐ先を替えました（下の「つなぎの直し」）。2026-11-05 に、1 行のつなぐ先を替えました（下の「つなぎの直し」）。2026-11-10 に、15 行（名前 13）を外し＝主にアプリが品目の表でこの名前を直接引けるようになったためです、16 行（名前 10）のつなぐ先を替えました（下の「つなぎの直し」）。
+The links were added in batches: batch 1 on 2026-10-31 (848 rows), batches 2–4 on 2026-11-01 (all the remaining links from the sorting), batch 5 on 2026-11-01 (285 rows, mostly `K4`), batch 6 on 2026-11-01 (26 rows for 25 names, `K3` 1, `K4` 25: names whose links had been left for a decision), and batch 7 on 2026-11-02 (1 row for 1 name, `K4` 1: a name still left for a decision after batch 6). On 2026-11-02, after a review, 11 rows were removed and 7 rows were linked to a different item (see “Changes to links” below). Batch 8 on 2026-11-02 added 15 rows for 15 names (`K4` 15: the last names left for a decision, linked to 2 generic item names newly added to the item table). On 2026-11-03, 3 rows for 3 names were removed because the app now finds these names in the item table directly (see “Changes to links” below). On 2026-11-04, 1 row for 1 name was removed for the same kind of reason, and 1 row was linked to a different item (see “Changes to links” below). On 2026-11-05, 1 row was linked to a different item (see “Changes to links” below). On 2026-11-10, 15 rows for 13 names were removed, mostly because the app now finds these names in the item table directly, and 16 rows for 10 names were linked to a different item (see “Changes to links” below). On 2026-11-16, 2 rows for 2 names were removed because the app now answers these names directly from its item table (see “Changes to links” below). / つなぎは何回かに分けて足しました（2026-10-31 に1回目の 848 行・2026-11-01 に2〜4回目＝仕分けたつなぎの残り全部・2026-11-01 に5回目の 285 行＝主に `K4`・2026-11-01 に6回目の 26 行（名前 25・`K3` 1・`K4` 25）＝つなぐかどうかを決めかねていた名前・2026-11-02 に7回目の 1 行（名前 1・`K4` 1）＝6回目のあとも決めかねていた名前）。2026-11-02 に、見直しで 11 行を外し、7 行のつなぐ先を替えました（下の「つなぎの直し」）。2026-11-02 に8回目の 15 行（名前 15・`K4` 15）＝最後まで決めかねていた名前を、品目の表に新しく足した 2 つの品目につなぎました。2026-11-03 に、3 行（名前 3）を外しました＝アプリが品目の表でこの名前を直接引けるようになったためです（下の「つなぎの直し」）。2026-11-04 に、同じわけで 1 行（名前 1）を外し、1 行のつなぐ先を替えました（下の「つなぎの直し」）。2026-11-05 に、1 行のつなぐ先を替えました（下の「つなぎの直し」）。2026-11-10 に、15 行（名前 13）を外し＝主にアプリが品目の表でこの名前を直接引けるようになったためです、16 行（名前 10）のつなぐ先を替えました（下の「つなぎの直し」）。2026-11-16 に、2 行（名前 2）を外しました＝アプリが品目の表でこの名前に直接答えるようになったためです（下の「つなぎの直し」）。
+
+## Changes to links / つなぎの直し（2026-11-16）
+
+On 2026-11-16, 2 rows were removed from `off-alias.csv`; no row was added or linked to a different item. This brings the table in line with the app as published on 2026-11-16.
+
+- Removed: キーマカレー (keema curry) and グリーンカレー (green curry) had been linked to レトルトカレー (curry in a retort pouch). On 2026-11-16, the app added these two plain dish names to its item table as ready-made dishes from the deli counter (refrigerated, 3 days), because in Japanese supermarkets a plain dish name most often means a deli dish. The item table now answers these names directly, so the links were removed. For these two products the estimated shelf life becomes shorter (365 days at room temperature → 3 days refrigerated).
+
+2026-11-16 に、`off-alias.csv` の 2 行を外しました（足した行・つなぐ先を替えた行はありません）。2026-11-16 に公開したアプリに、この表を合わせました。
+
+- 外した行：キーマカレー と グリーンカレー は、レトルトカレー につないでいました。2026-11-16 に、アプリの品目の表に、この2つの素の料理名を惣菜の品目（冷蔵 3日）として足しました＝スーパーでは、素の料理名は惣菜のことが多いためです。品目の表がこの名前に直接答えるので、つなぎを外しました。この2つの品の期限の目安は短くなります（常温 365日 → 冷蔵 3日）。
+
+| `code` | `name_ja` | Before / 前 | After / 後 | Why / 理由 |
+|---|---|---|---|---|
+| `4902688242795` | グリーンカレー | レトルトカレー (`K3`) | — (removed / 外した) | the item table now has グリーンカレー as a deli dish / 品目の表に惣菜の グリーンカレー を足した |
+| `4902688242818` | キーマカレー | レトルトカレー (`K3`) | — (removed / 外した) | the item table now has キーマカレー as a deli dish / 品目の表に惣菜の キーマカレー を足した |
 
 ## Changes to links / つなぎの直し（2026-11-10）
 
